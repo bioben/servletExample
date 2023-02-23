@@ -1,0 +1,6 @@
+follow these instructions to setup a server: https://nyumbani-coder.hashnode.dev/how-to-create-java-servlet-with-tomcat-and-maven-in-vs-code
+
+use "nvm clean package"
+then upload the war file to the tomcat server
+
+In the browser, must navigate to http://localhost:8080/servlet-1.0-SNAPSHOT/HelloServlet
