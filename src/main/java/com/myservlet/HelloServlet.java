@@ -1,6 +1,7 @@
 package com.myservlet;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,21 +13,30 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Output to frontend
         PrintWriter out = response.getWriter();
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<title>");
-        out.println("</title>");
-        out.println("</head>");
-        out.println("<body>");
 
-        myEx instanceMyEx = new myEx();
-        String i = instanceMyEx.tempMethod();
+        /*Not functional yet
+        CancerSubtype breastMMR = new CancerSubtype("breast", "brca_MMRdeficient");
+        ArrayList<SingleGeneInteraction> breastMMRGI = breastMMR.geneInteractions;
 
-        out.println("Hello I am your Servlet. Here is your result: " + i);
-        out.println("</body>");
-        out.println("</html>");
+        for (int i = 0; i < 10; i++) {
+            SingleGeneInteraction currSGI = breastMMRGI.get(i);
+            String currOutput = "source: " + currSGI.getSource() + " -> target: " + currSGI.getTarget();
+            out.append("<p>" + currOutput + "</p>");
+        }
         out.close();
+        */
+
+        SingleGeneInteraction sgi1 = new SingleGeneInteraction("g1", "g2", 1);
+        SingleGeneInteraction sgi2 = new SingleGeneInteraction("g3", "g4", 1);
+        String currOutput = "source: " + sgi1.getSource() + " -> target: " + sgi1.getTarget();
+        out.append("<p>" + currOutput + "</p>");
+        String currOutput2 = "source: " + sgi2.getSource() + " -> target: " + sgi2.getTarget();
+        out.append("<p>" + currOutput2 + "</p>");
+
+        out.close();
+
     }
 }
 
