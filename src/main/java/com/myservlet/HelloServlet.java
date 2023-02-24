@@ -28,13 +28,14 @@ public class HelloServlet extends HttpServlet {
         out.close();
         */
 
-        SingleGeneInteraction sgi1 = new SingleGeneInteraction("g1", "g2", 1);
-        SingleGeneInteraction sgi2 = new SingleGeneInteraction("g3", "g4", 1);
-        String currOutput = "source: " + sgi1.getSource() + " -> target: " + sgi1.getTarget();
-        out.append("<p>" + currOutput + "</p>");
-        String currOutput2 = "source: " + sgi2.getSource() + " -> target: " + sgi2.getTarget();
-        out.append("<p>" + currOutput2 + "</p>");
+        // SingleGeneInteraction sgi1 = new SingleGeneInteraction("g1", "g2", 1);
+        // SingleGeneInteraction sgi2 = new SingleGeneInteraction("g3", "g4", 1);
+        // String currOutput = "source: " + sgi1.getSource() + " -> target: " + sgi1.getTarget();
+        // out.append("<p>" + currOutput + "</p>");
+        // String currOutput2 = "source: " + sgi2.getSource() + " -> target: " + sgi2.getTarget();
+        // out.append("<p>" + currOutput2 + "</p>");
 
+        out.println("Hello World");
         out.close();
 
     }
